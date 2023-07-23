@@ -1,0 +1,29 @@
+{% extends 'products/base.html'%} {% block content%}
+<br /><br>
+<div class="container">
+  <h1 class="card-header text-center">ALL RECEIPTS</h1><br>
+  {% for sale in sales %}
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Customer : {{sale.issued_to | title}}</h3>
+      <h6 class="card-text">Item : {{sale.item}}</h6>
+      <h6 class="card-text">Amount Received:  UGX{{ sale.amount_recieved }}</h6>
+      <h6 class="card-text">Quantity: {{sale.quantity }}</h6>
+      <h2>Total Price :  UGX{{ sale.get_total }}</h2>
+      <div style="flex: 1">
+        <h6 class="card-text">Change Collected:  UGX{{ sale.get_change }}</h6>
+        <a href="{% url 'receipt_detail' sale.id%}">
+          <input
+            type="submit"
+            value="Final Receipt"
+            class="btn btn-danger"
+            type="button"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+  {% endfor %}
+</div>
+{% endblock %}

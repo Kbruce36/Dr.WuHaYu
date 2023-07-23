@@ -1,0 +1,25 @@
+{% extends 'products/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<br><br><br><br>
+<div class="container">
+  <center>
+    <div>    
+      <h2>Thank you for submitting an appointment.</h2>
+      <p><strong>Review your details.</strong></p>
+      <p><strong>Name: </strong>{{your_name}}</p>
+      <p><strong>Phone: </strong>{{your_phone}}</p>
+      <p><strong>Email: </strong>{{your_email}}</p>
+      <p><strong>Address: </strong>{{your_address}}</p>
+      <p><strong>Time: </strong>{{your_time}}</p>
+      <p><strong>Time: </strong>{{your_time}}</p>
+      <p><strong>Message: </strong>{{your_message}}</p>
+    </div>
+
+  </center>
+
+<br><br>
+<br><br>
+{% endblock %}

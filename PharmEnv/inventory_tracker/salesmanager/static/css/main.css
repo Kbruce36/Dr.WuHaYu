@@ -1,0 +1,105 @@
+html,body {
+    position: relative;
+    overflow-x: hidden;
+    background:  url('/static/images/img4.jpg');
+    backdrop-filter: blur(5px);
+    width: 100% !important;
+    height: 100vh;
+    display: table;
+    position: relative;
+    background-position: center;
+    background-attachment: scroll;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0px;
+    
+}
+  
+body::before{
+      background-color: hsl(0, 0%, 98%);
+      font-family: 'Open Sans';
+      
+      background:  url('/static/images/img4.jpg');
+ }
+    
+
+form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color:#85d9f5 ;
+}
+
+.navbar li a {
+    font-size: 20px;
+    color:white;
+    opacity: 1;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+}
+
+@media(max-width: 767px){
+    form { 
+        width: 90%;
+    }
+}
+
+.table{
+    background-color: #cbe4ec;
+}
+.card-header1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: px;
+    
+}
+.btn-color, .card-header1{
+    background-color: #E91E63; /* set starting background color */
+    animation: change-colors 3s infinite; /* apply animation */
+  }
+  
+  @keyframes change-colors {
+    0% {
+      background-color: #E91E63; /* starting color */
+    }
+    50% {
+      background-color: #673AB7; /* intermediate color */
+    }
+    100% {
+      background-color: #00BCD4; /* ending color */
+    }
+  }
+
+
+#flash_message{
+    color: green;
+    background: aliceblue;
+    width: 60%;
+    text-align: center;
+    margin:1% 20%;
+    padding-top: 5px;
+
+}
+#close_btn{
+    color: white;
+    background-color: red;
+}
+
+#cardground{
+    background-image:  url('/static/images/img4.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer {
+    background-color: #ADD8E6 ;
+    padding: 20px;
+    
+    display: flex;
+  }

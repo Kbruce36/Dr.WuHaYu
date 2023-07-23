@@ -1,0 +1,29 @@
+{% extends 'products/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6" >
+      <div class="card" style="margin-top: 48px; border-radius: 10px; margin-bottom: 108px;" >
+        <div class="card-header1" style="background-color: #ADD8E6; text-align: center; border-radius: 10px;">Login Form</div>
+        <div class="card-body" id="cardground">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              {{ form.username|as_crispy_field }}
+            </div>
+            <div class="form-group">
+              {{ form.password|as_crispy_field }}
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-color">Log in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
